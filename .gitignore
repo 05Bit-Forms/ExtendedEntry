@@ -27,6 +27,7 @@ bld/
 *.ilk
 *.mdb
 *.meta
+*.nupkg
 *.obj
 *.pch
 *.pdb
