@@ -10,11 +10,11 @@ using UIKit;
 using Foundation;
 
 // Project
-using ZeroFiveBit.Forms.ExtendedEntry;
-using ZeroFiveBit.Forms.ExtendedEntry.iOS;
+using Uniforms.ExtendedEntry;
+using Uniforms.ExtendedEntry.iOS;
 
 [assembly: ExportRenderer(typeof(ExtendedEntry), typeof(ExtendedEntryRenderer))]
-namespace ZeroFiveBit.Forms.ExtendedEntry.iOS
+namespace Uniforms.ExtendedEntry.iOS
 {
     /// <summary>
     /// A renderer for the ExtendedEntry control.

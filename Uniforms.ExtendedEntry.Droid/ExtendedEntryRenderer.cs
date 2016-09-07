@@ -6,11 +6,11 @@ using Android.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-using ZeroFiveBit.Forms.ExtendedEntry;
-using ZeroFiveBit.Forms.ExtendedEntry.Droid;
+using Uniforms.ExtendedEntry;
+using Uniforms.ExtendedEntry.Droid;
 
 [assembly: ExportRenderer(typeof(ExtendedEntry), typeof(ExtendedEntryRenderer))]
-namespace ZeroFiveBit.Forms.ExtendedEntry.Droid
+namespace Uniforms.ExtendedEntry.Droid
 {
     /// <summary>
     /// Class ExtendedEntryRenderer.

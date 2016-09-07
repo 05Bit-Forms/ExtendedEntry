@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
-namespace ZeroFiveBit.Forms.ExtendedEntry
+namespace Uniforms.ExtendedEntry
 {
     /// <summary>
     /// An extended entry control that allows the Font and text X alignment to be set

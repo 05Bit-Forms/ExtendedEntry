@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroFiveBit.Forms.ExtendedEntry", "ZeroFiveBit.Forms.ExtendedEntry\ZeroFiveBit.Forms.ExtendedEntry.csproj", "{FC04F32C-9CF1-4336-B90F-207ED8AB0B91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniforms.ExtendedEntry", "Uniforms.ExtendedEntry\Uniforms.ExtendedEntry.csproj", "{FC04F32C-9CF1-4336-B90F-207ED8AB0B91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroFiveBit.Forms.ExtendedEntry.iOS", "ZeroFiveBit.Forms.ExtendedEntry.iOS\ZeroFiveBit.Forms.ExtendedEntry.iOS.csproj", "{39F6CCD6-DA36-4C12-A823-802209162160}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniforms.ExtendedEntry.iOS", "Uniforms.ExtendedEntry.iOS\Uniforms.ExtendedEntry.iOS.csproj", "{39F6CCD6-DA36-4C12-A823-802209162160}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F9CC6466-B2CA-442F-8B4F-AA74B6C95DC8}"
-	ProjectSection(SolutionItems) = preProject
-		Common\ZeroFiveBit.Forms.ExtendedEntry.nuspec = Common\ZeroFiveBit.Forms.ExtendedEntry.nuspec
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroFiveBit.Forms.ExtendedEntry.Droid", "ZeroFiveBit.Forms.ExtendedEntry.Droid\ZeroFiveBit.Forms.ExtendedEntry.Droid.csproj", "{1919B92A-8679-421A-B9A7-CDF44EC8B08B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniforms.ExtendedEntry.Droid", "Uniforms.ExtendedEntry.Droid\Uniforms.ExtendedEntry.Droid.csproj", "{1919B92A-8679-421A-B9A7-CDF44EC8B08B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

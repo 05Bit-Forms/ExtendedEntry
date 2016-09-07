@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>ZeroFiveBit.Forms.ExtendedEntry</id>
-    <version>0.0.2</version>
+    <id>Uniforms.ExtendedEntry</id>
+    <version>0.0.3</version>
     <title>Extended Entry class for Xamarin.Forms</title>
     <authors>Alexey Kinev</authors>
     <owners>Alexey Kinev</owners>
@@ -17,19 +17,19 @@
   </metadata>
   <files>
     <!--Core PCL-->
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll" target="lib\portable-net45+win+wp80+MonoAndroid10+xamarinios10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll.mdb" target="lib\portable-net45+win+wp80+MonoAndroid10+xamarinios10" />
+    <file src="Uniforms.ExtendedEntry.dll" target="lib\portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10" />
+    <file src="Uniforms.ExtendedEntry.dll.mdb" target="lib\portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10" />
 
     <!--Xamarin.iOS-->
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll.mdb" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.iOS.dll" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.iOS.dll.mdb" target="lib\MonoAndroid10" />
+    <file src="Uniforms.ExtendedEntry.dll" target="lib\Xamarin.iOS10" />
+    <file src="Uniforms.ExtendedEntry.dll.mdb" target="lib\Xamarin.iOS10" />
+    <file src="Uniforms.ExtendedEntry.iOS.dll" target="lib\Xamarin.iOS10" />
+    <file src="Uniforms.ExtendedEntry.iOS.dll.mdb" target="lib\Xamarin.iOS10" />
 
     <!--Xamarin.Droid-->
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.dll.mdb" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.Droid.dll" target="lib\MonoAndroid10" />
-    <file src="ZeroFiveBit.Forms.ExtendedEntry.Droid.dll.mdb" target="lib\MonoAndroid10" />
+    <file src="Uniforms.ExtendedEntry.dll" target="lib\MonoAndroid10" />
+    <file src="Uniforms.ExtendedEntry.dll.mdb" target="lib\MonoAndroid10" />
+    <file src="Uniforms.ExtendedEntry.Droid.dll" target="lib\MonoAndroid10" />
+    <file src="Uniforms.ExtendedEntry.Droid.dll.mdb" target="lib\MonoAndroid10" />
   </files>
 </package>
