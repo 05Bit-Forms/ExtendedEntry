@@ -18,8 +18,5 @@ This is a friendly fork made for several reasons:
 
 ``ExtendedEntry`` class is a subclass of ``Xamarin.Forms.Entry`` with several extra features:
 
-- Font, FontProperty
-- XAlign, XAlignProperty
 - HasBorder, HasBorderProperty
-- PlaceholderTextColor, PlaceholderTextColorProperty
 - CursorColor, CursorColorProperty

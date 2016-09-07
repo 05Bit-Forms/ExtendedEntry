@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Uniforms.ExtendedEntry</id>
+    <version>0.1.0</version>
+    <title>Extended Entry class for Xamarin.Forms</title>
+    <authors>Alexey Kinëv</authors>
+    <owners>Alexey Kinëv</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Even more customizable ExtendedEntry class for Xamarin.Forms</description>
+    <releaseNotes>Initial alpha release: basic features</releaseNotes>
+    <copyright>Copyright 2015, 05Bit</copyright>
+    <tags>xamarin, pcl, xamarin.forms, ios</tags>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <!--Core PCL-->
+    <file src="lib/Uniforms.ExtendedEntry.dll" target="lib/portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10" />
+    <file src="lib/Uniforms.ExtendedEntry.dll.mdb" target="lib/portable-net45+win+wp80+MonoAndroid10+Xamarin.iOS10" />
+
+    <!--Xamarin.iOS-->
+    <file src="lib/Uniforms.ExtendedEntry.dll" target="lib/Xamarin.iOS10" />
+    <file src="lib/Uniforms.ExtendedEntry.dll.mdb" target="lib/Xamarin.iOS10" />
+    <file src="lib/Uniforms.ExtendedEntry.iOS.dll" target="lib/Xamarin.iOS10" />
+    <file src="lib/Uniforms.ExtendedEntry.iOS.dll.mdb" target="lib/Xamarin.iOS10" />
+
+    <!--Xamarin.Droid-->
+    <file src="lib/Uniforms.ExtendedEntry.dll" target="lib/MonoAndroid10" />
+    <file src="lib/Uniforms.ExtendedEntry.dll.mdb" target="lib/MonoAndroid10" />
+    <file src="lib/Uniforms.ExtendedEntry.Droid.dll" target="lib/MonoAndroid10" />
+    <file src="lib/Uniforms.ExtendedEntry.Droid.dll.mdb" target="lib/MonoAndroid10" />
+  </files>
+</package>

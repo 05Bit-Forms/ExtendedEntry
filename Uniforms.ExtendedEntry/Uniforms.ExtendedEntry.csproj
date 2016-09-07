@@ -34,11 +34,6 @@
           <command>nuget pack</command>
           <workingdir>${SolutionDir}/Common</workingdir>
         </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>nuget pack -OutputDirectory ${SolutionDir}/packages</command>
-          <workingdir>${SolutionDir}/Common</workingdir>
-        </Command>
       </CustomCommands>
     </CustomCommands>
     <DebugSymbols>true</DebugSymbols>
