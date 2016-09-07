@@ -1,19 +1,15 @@
-﻿// Cross-platform
-using System;
+﻿using System;
 using System.Drawing;
 using System.ComponentModel;
 using Xamarin.Forms;
-
-// Platform specific
 using Xamarin.Forms.Platform.iOS;
-using UIKit;
 using Foundation;
-
-// Project
+using UIKit;
 using Uniforms.ExtendedEntry;
 using Uniforms.ExtendedEntry.iOS;
 
 [assembly: ExportRenderer(typeof(ExtendedEntry), typeof(ExtendedEntryRenderer))]
+
 namespace Uniforms.ExtendedEntry.iOS
 {
     /// <summary>
@@ -22,150 +18,82 @@ namespace Uniforms.ExtendedEntry.iOS
     public class ExtendedEntryRenderer : EntryRenderer
     {
         /// <summary>
+        /// Empty method for reference
+        /// </summary>
+        public static new void Init ()
+        {
+        }
+
+        /// <summary>
         /// The on element changed callback.
         /// </summary>
-        /// <param name="e">The event arguments.</param>
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
 
-            var view = (ExtendedEntry)Element;
-
-            if (view != null)
-            {
-                SetFont(view);
-                SetTextAlignment(view);
-                SetBorder(view);
-                SetPlaceholderTextColor(view);
-                SetCursorColor(view);
+            if ((Control != null) && (Element != null)) {
+                UpdateBorder ();
+                UpdateCursorColor ();
             }
 
-            ResizeHeight();
+            // ResizeHeight();
         }
 
         /// <summary>
         /// The on element property changed callback
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="PropertyChangedEventArgs"/> instance containing the event data.</param>
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
 
-            var view = (ExtendedEntry)Element;
-
-            if (e.PropertyName == ExtendedEntry.FontProperty.PropertyName)
-            {
-                SetFont(view);
-            }
-            else if (e.PropertyName == ExtendedEntry.XAlignProperty.PropertyName)
-            {
-                SetTextAlignment(view);
-            }
-            else if (e.PropertyName == ExtendedEntry.HasBorderProperty.PropertyName)
-            {
-                SetBorder(view);
-            }
-            else if (e.PropertyName == ExtendedEntry.PlaceholderTextColorProperty.PropertyName)
-            {
-                SetPlaceholderTextColor(view);
-            }
-            else if (e.PropertyName == ExtendedEntry.CursorColorProperty.PropertyName)
-            {
-                SetCursorColor(view);
+            if (e.PropertyName == ExtendedEntry.HasBorderProperty.PropertyName) {
+                UpdateBorder ();
+            } else if (e.PropertyName == ExtendedEntry.CursorColorProperty.PropertyName) {
+                UpdateCursorColor ();
             }
 
-            ResizeHeight();
-        }
-
-        /// <summary>
-        /// Sets the text alignment.
-        /// </summary>
-        /// <param name="view">The view.</param>
-        private void SetTextAlignment(ExtendedEntry view)
-        {
-            switch (view.XAlign)
-            {
-                case TextAlignment.Center:
-                    Control.TextAlignment = UITextAlignment.Center;
-                    break;
-
-                case TextAlignment.End:
-                    Control.TextAlignment = UITextAlignment.Right;
-                    break;
-
-                case TextAlignment.Start:
-                    Control.TextAlignment = UITextAlignment.Left;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Sets the font.
-        /// </summary>
-        /// <param name="view">The view.</param>
-        private void SetFont(ExtendedEntry view)
-        {
-            UIFont uiFont;
-            if (view.Font != Font.Default && (uiFont = view.Font.ToUIFont()) != null)
-            {
-                Control.Font = uiFont;
-            }
-            else if (view.Font == Font.Default)
-            {
-                Control.Font = Font.Default.ToUIFont();
-            }
+            // ResizeHeight();
         }
 
         /// <summary>
         /// Sets the border.
         /// </summary>
-        /// <param name="view">The view.</param>
-        private void SetBorder(ExtendedEntry view)
+        void UpdateBorder ()
         {
-            Control.BorderStyle = view.HasBorder ? UITextBorderStyle.RoundedRect : UITextBorderStyle.None;
+            var view = Element as ExtendedEntry;
+
+            Control.BorderStyle = (view.HasBorder ?
+                                   UITextBorderStyle.RoundedRect :
+                                   UITextBorderStyle.None);
         }
 
         /// <summary>
         /// Resizes the height.
         /// </summary>
-        private void ResizeHeight()
-        {
-            if (Element != null)
-            {
-                if (Element.HeightRequest >= 0) return;
+        //void ResizeHeight()
+        //{
+        //    if (Element != null)
+        //    {
+        //        if (Element.HeightRequest >= 0) return;
 
-                var height = Math.Max(Bounds.Height,
-                    new UITextField {Font = Control.Font}.IntrinsicContentSize.Height);
+        //        var height = Math.Max(Bounds.Height,
+        //            new UITextField {Font = Control.Font}.IntrinsicContentSize.Height);
 
-                Control.Frame = new RectangleF(0.0f, 0.0f, (float)Element.Width, (float)height);
+        //        Control.Frame = new RectangleF(0.0f, 0.0f, (float)Element.Width, (float)height);
 
-                Element.HeightRequest = height;
-            }
-        }
-
-        /// <summary>
-        /// Sets the color of the placeholder text.
-        /// </summary>
-        /// <param name="view">The view.</param>
-        void SetPlaceholderTextColor(ExtendedEntry view)
-        {
-            if(string.IsNullOrEmpty(view.Placeholder) == false && view.PlaceholderTextColor != Color.Default)
-            {
-                NSAttributedString placeholderString = new NSAttributedString(
-                    view.Placeholder, new UIStringAttributes { ForegroundColor = view.PlaceholderTextColor.ToUIColor() });
-                Control.AttributedPlaceholder = placeholderString;
-            }
-        }
+        //        Element.HeightRequest = height;
+        //    }
+        //}
 
         /// <summary>
         /// Sets the color of the cursor.
         /// </summary>
-        void SetCursorColor(ExtendedEntry view)
+        void UpdateCursorColor ()
         {
-            if (view.CursorColor != Color.Default)
-            {
-                Control.TintColor = view.CursorColor.ToUIColor();
+            var view = Element as ExtendedEntry;
+
+            if (view.CursorColor != Color.Default) {
+                Control.TintColor = view.CursorColor.ToUIColor ();
             }
         }
     }
