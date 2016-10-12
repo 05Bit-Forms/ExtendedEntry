@@ -1,9 +1,7 @@
-﻿using System;
-using System.Drawing;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using Foundation;
+//using Foundation;
 using UIKit;
 using Uniforms.ExtendedEntry;
 using Uniforms.ExtendedEntry.iOS;
@@ -12,6 +10,8 @@ using Uniforms.ExtendedEntry.iOS;
 
 namespace Uniforms.ExtendedEntry.iOS
 {
+    using Console = System.Diagnostics.Debug;
+
     /// <summary>
     /// A renderer for the ExtendedEntry control.
     /// </summary>
@@ -21,8 +21,7 @@ namespace Uniforms.ExtendedEntry.iOS
         /// Empty method for reference
         /// </summary>
         public static new void Init ()
-        {
-        }
+        { }
 
         /// <summary>
         /// The on element changed callback.
@@ -31,9 +30,10 @@ namespace Uniforms.ExtendedEntry.iOS
         {
             base.OnElementChanged(e);
 
-            if ((Control != null) && (Element != null)) {
+            if (e.NewElement != null) {
                 UpdateBorder ();
                 UpdateCursorColor ();
+                UpdateStyles ();
             }
 
             // ResizeHeight();
@@ -94,6 +94,26 @@ namespace Uniforms.ExtendedEntry.iOS
 
             if (view.CursorColor != Color.Default) {
                 Control.TintColor = view.CursorColor.ToUIColor ();
+            }
+        }
+
+        void UpdateStyles ()
+        {
+            Console.WriteLine ($"ExtendedEntryRenderer: UpdateStyles: {Element.StyleClass}");
+
+            if (Element.StyleClass != null) {
+                var entry = Element as ExtendedEntry;
+
+                foreach (var style in Element.StyleClass) {
+                    switch (style) {
+                    case ExtendedEntry.NoBorderStyle:
+                        entry.HasBorder = false;
+                        break;
+                    case ExtendedEntry.PlainCellStyle:
+                        entry.HasBorder = false;
+                        break;
+                    }
+                }
             }
         }
     }

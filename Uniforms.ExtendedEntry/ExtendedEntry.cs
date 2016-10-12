@@ -9,6 +9,9 @@ namespace Uniforms.ExtendedEntry
     /// </summary>
     public class ExtendedEntry : Entry
     {
+        public const string NoBorderStyle = "NoBorder";
+        public const string PlainCellStyle = "PlainCell";
+
         /// <summary>
         /// The HasBorder property.
         /// </summary>
